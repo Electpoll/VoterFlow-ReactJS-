@@ -1,0 +1,39 @@
+
+export const MOCK_USER = {
+  name: 'Bukola Olapade',
+  email: 'benjaminolapade@gmail.com',
+  matricNumber: '123456',
+  level: '300L'
+};
+
+export const CANDIDATES = {
+  president: [
+    { id: 1, name: 'Cody Fernand', votes: 954, image: '/api/placeholder/200/200' },
+    { id: 2, name: 'Hannah Baker', votes: 200, image: '/api/placeholder/200/200' },
+    { id: 3, name: 'Indecisive', votes: 80, image: '/api/placeholder/200/200' }
+  ],
+  vicePresident: [
+    { id: 1, name: 'Maryam Fadel', votes: 500, image: '/api/placeholder/200/200' },
+    { id: 2, name: 'Jamal Givens', votes: 300, image: '/api/placeholder/200/200' },
+    { id: 3, name: 'Indecisive', votes: 50, image: '/api/placeholder/200/200' }
+  ],
+  positions: [
+    'President', 'Vice-President', 'General Secretary', 
+    'Assistant General Secretary', 'Sports Secretary', 
+    'Social/Welfare Officer', 'Academic Coordinator', 
+    'Public Relation Officer'
+  ]
+};
+
+export const ELECTION_STATS = {
+  totalVotes: 1234,
+  accreditedVoters: 2165,
+  votePercentage: 57,
+  accessTally: 1287,
+  timeRemaining: {
+    days: 0,
+    hours: 7,
+    minutes: 43,
+    seconds: 57
+  }
+};

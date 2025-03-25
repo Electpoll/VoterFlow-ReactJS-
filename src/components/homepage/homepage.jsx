@@ -7,14 +7,13 @@ import Footer from "./footersection/footer";
 export default function Homepage() {
   return (
     <>
-        <div className="flex">
+        <div className="flex flex-col-reverse md:flex-row">
         <Lefthero/>
         <Righthero/>
         </div>
         <Votercontent/>
         <Report/>
         <Footer/>
-    
     </>
   )
 }

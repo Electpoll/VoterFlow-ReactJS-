@@ -14,7 +14,7 @@ export default function Report() {
                 <input type="email" placeholder="Your Email" className="text-start outline-none pl-4 pr-8 ml-4 w-full py-2 border-2 border-gray-500 rounded-lg" size="50" maxLength="50" />
                 </div>
                 <textarea rows="5" cols="50" placeholder="Message" className="text-start block outline-none p-5 w-full my-2 border-2 border-gray-500 rounded-lg"></textarea>
-                <input type="submit" value="Send Message" className="bg-amber-500 text-black font-bold border-2 border-transparent w-full py-2 rounded-lg hover:bg-amber-600" />
+                <input type="submit" value="Send Message" className="bg-black text-amber-500 font-bold border-2 border-transparent w-full py-2 rounded-lg hover:bg-amber-600 hover:text-black transition-all" />
         </div>
         </div>
     </section>
