@@ -1,7 +1,10 @@
 
 import { useState } from 'react';
-import { CANDIDATES } from '../mock';
+import { CANDIDATES } from '../../../components/mock';
 import PropTypes from 'prop-types'
+import Sidebar from '../../../components/sidebar';
+import Nav from '../../../components/nav';
+
 
 export default function CastVote() {
   const [selectedCandidates, setSelectedCandidates] = useState({
@@ -17,7 +20,15 @@ export default function CastVote() {
   };
 
   return (
+    <>
+    <div className="flex">
+      <Sidebar for="voting" logout={true}/>
+    
     <div className="p-8 w-full bg-gray-100">
+    <div className="flex justify-end">
+          <Nav link="dashboard"/>
+        </div>
+
       <h2 className="text-2xl font-bold mb-6">Cast Your Vote</h2>
       
       <div className="space-y-6">
@@ -47,6 +58,8 @@ export default function CastVote() {
         </button>
       </div>
     </div>
+    </div>
+    </>
   );
 }
 

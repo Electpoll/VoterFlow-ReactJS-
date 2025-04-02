@@ -4,11 +4,11 @@ function votersLogin() {
   return (
     <>
     {/*Report*/}
-    <div className='flex justify-center items-center gap-5 w-full'>
-    <div className='w-1/2 px-10'>
+    <div className='flex justify-center items-center flex-col md:flex-row gap-5 w-full'>
+    <div className='md:w-1/2 px-10'>
         <img src={img} alt="" />
     </div>
-    <div className="w-1/2">
+    <div className="md:w-1/2">
     <div className="max-w-2xl text-justify">
         <h1 className='font-semibold text-5xl my-5'> Of Course You Have The Right To Vote...</h1>
         <p className='my-1'>But only members of NAMSSN UI are eligble to vote in this election. If you think this is a mistake, please <a className='text-amber-500 text-underline'>send us a message</a> to resolve this. 
@@ -18,7 +18,7 @@ function votersLogin() {
     </div>
 
     <div className="bg-black text-white p-10 my-10">
-        <div className="flex justify-around items-center m-10">
+        <div className="flex justify-around flex-col md:flex-row items-center m-10">
         <div className="flex">
              <svg width="100" height="100" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg" className='mx-5'>
              <path d="M15 30C10.8333 30 7.29167 28.5417 4.375 25.625C1.45833 22.7083 0 19.1667 0 15C0 10.8333 1.45833 7.29167 4.375 4.375C7.29167 1.45833 10.8333 0 15 0C18.75 0 22.0108 1.1875 24.7825 3.5625C27.5542 5.9375 29.2308 8.91667 29.8125 12.5H50V17.5H29.8125C29.2292 21.0833 27.5517 24.0625 24.78 26.4375C22.0083 28.8125 18.7483 30 15 30Z" fill="#FF9900"/>

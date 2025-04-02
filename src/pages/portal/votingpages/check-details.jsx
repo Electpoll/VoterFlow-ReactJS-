@@ -6,7 +6,7 @@ import {
   HashIcon,
   GraduationCap 
 } from 'lucide-react';
-import { MOCK_USER, CANDIDATES } from '../mock';
+import { MOCK_USER, CANDIDATES } from '../../../components/mock';
 import PropTypes from 'prop-types';
 
 export default function CheckDetails() {

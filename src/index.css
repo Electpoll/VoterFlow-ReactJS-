@@ -1,6 +1,14 @@
 
-
-
+body {
+    /* display: flex; */
+    width: 100% !important; /* Attempt to set width to 100% */
+  }
+  #root {
+    width: unset !important; /* Ensure root width is unset */
+  }
+  .loom {
+    width: unset !important; /* Ensure loom width is unset */
+  }
 
 @tailwind base;
 @tailwind components;

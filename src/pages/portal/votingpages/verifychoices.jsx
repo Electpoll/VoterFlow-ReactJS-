@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { CANDIDATES } from '../mock';
+import { CANDIDATES } from '../../../components/mock';
 
 export default function VerifyChoices() {
   // In a real app, this would come from previous voting state

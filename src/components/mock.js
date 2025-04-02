@@ -30,10 +30,22 @@ export const ELECTION_STATS = {
   accreditedVoters: 2165,
   votePercentage: 57,
   accessTally: 1287,
-  timeRemaining: {
-    days: 0,
-    hours: 7,
-    minutes: 43,
-    seconds: 57
-  }
+  timeRemaining: [
+    {
+      time: 'Days',
+      number: 0
+    },
+    {
+      time: 'Hours',
+      number: 7 
+    },
+    {
+      time: 'Minutes',
+      number: 43
+    },
+    {
+      time: 'Seconds',
+      number: 57
+    }
+  ]
 };
