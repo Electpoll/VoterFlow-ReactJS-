@@ -3,11 +3,11 @@ import img from '/img.png';
 export default function Votercontent() {
   return (
     <section>
-    <div className='md:mx-20 md:my-10 flex flex-col md:flex-row'>
+    <div className='p-5 md:mx-20 md:my-10 flex flex-col md:flex-row'>
     <div className='md:w-1/2 md:mx-10'>
         <img src={img} alt="" />
     </div>
-    <div className="md:w-1/2 md:m-10 text-justify">
+    <div className="my-5 md:w-1/2 md:m-10 text-justify">
         <button className='bg-black text-white font-bold rounded-3xl px-4 py-2 my-2'>Who can vote?</button>
         <h1 className='font-bold text-2xl mb-5'> Of Course You Have The Right To Vote</h1>
         <p className='my-1'>Of course we all have the right to vote but only members of NAMSSN UI are eligible to vote for the NAMSSN UI election. The voting system has been designed to ensure that this protocol is duly observed. 
@@ -19,7 +19,7 @@ export default function Votercontent() {
     </div>
 
     <div className="bg-black text-white p-10">
-        <div className="flex justify-around items-center m-10">
+        <div className="flex flex-col md:flex-row justify-around items-center m-10">
         <div className="flex">
              <svg width="100" height="100" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg" className='mx-5'>
              <path d="M15 30C10.8333 30 7.29167 28.5417 4.375 25.625C1.45833 22.7083 0 19.1667 0 15C0 10.8333 1.45833 7.29167 4.375 4.375C7.29167 1.45833 10.8333 0 15 0C18.75 0 22.0108 1.1875 24.7825 3.5625C27.5542 5.9375 29.2308 8.91667 29.8125 12.5H50V17.5H29.8125C29.2292 21.0833 27.5517 24.0625 24.78 26.4375C22.0083 28.8125 18.7483 30 15 30Z" fill="#FF9900"/>

@@ -2,13 +2,13 @@ import logo from '/logo (light).png'
 
 export default function Footer() {
     return (
-      <section className="bg-black text-white p-10">
-          <div className="flex justify-around">
-          <div className="w-1/3">
-            <img src={logo} alt="" className='my-4'/>
-            <p className='text-gray-500'>Electpoll provides secure and reliable polling and elections for organizations and institutions. Our platform allows qualified voters to vote without barriers. We simplify voting via voter education, identification, and consulting.</p>
-          </div>
+      <section className="bg-black text-white p-5 md:p-10">
+          <div className="md:justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 ">
           <div className="">
+            <img src={logo} alt="" className='my-4'/>
+            <p className='text-gray-500 xl:max-w-3xl'>Electpoll provides secure and reliable polling and elections for organizations and institutions. Our platform allows qualified voters to vote without barriers. We simplify voting via voter education, identification, and consulting.</p>
+          </div>
+          <div className="my-5">
               <h1 className='font-bold text-4xl my-5'>Contact</h1>
               <div className="flex my-5">
               <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,34 +29,34 @@ export default function Footer() {
               <p className='mx-2'>support@electpoll.com</p>
               </div>
           </div>
-          <div className="">
+          <div className="my-5">
               <h1 className='font-bold text-4xl my-4'>Links</h1>
+              <div className="flex items-center gap-10">
               <ul className='text-gray-500'>
                 <li className='my-2 hover:text-white'>Homepage</li>
                 <li className='my-2 hover:text-white'>About Us</li>
                 <li className='my-2 hover:text-white'>Features</li>
                 <li className='my-2 hover:text-white'>Login</li>
               </ul>
-          </div>
-          <div className="mt-16">
-            <ul className='text-gray-500'>
+              <ul className='text-gray-500'>
               <li className='my-2 hover:text-white'>Plans and Pricing</li>
               <li className='my-2 hover:text-white'>Support</li>
               <li className='my-2 hover:text-white'>FAQ</li>
               <li className='my-2 hover:text-white'>Create Account</li>
             </ul>
+            </div>
           </div>
           </div>
-          <div className="flex justify-between mt-16 mx-16">
+          <div className="flex justify-between gap-y-5 flex-col-reverse md:flex-row md:mt-16 md:mx-16">
             <p className='text-gray-500'>© Copyright Electpoll e-voting system</p>
-            <div className="flex">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className='mx-2'>
+            <div className="flex items-center gap-3">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 0.719971C6.66663 0.719971 0.666626 6.70664 0.666626 14.08C0.666626 20.7466 5.54662 26.28 11.92 27.28V17.9466H8.53329V14.08H11.92V11.1333C11.92 7.78664 13.9066 5.94664 16.96 5.94664C18.4133 5.94664 19.9333 6.19997 19.9333 6.19997V9.4933H18.2533C16.6 9.4933 16.08 10.52 16.08 11.5733V14.08H19.7866L19.1866 17.9466H16.08V27.28C19.2219 26.7838 22.0829 25.1807 24.1465 22.7601C26.2102 20.3394 27.3404 17.2608 27.3333 14.08C27.3333 6.70664 21.3333 0.719971 14 0.719971Z" fill="#FF9900"/>
             </svg>
-            <svg width="28" height="28" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg" className='mx-2'>
+            <svg width="28" height="28" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M27.9467 3.00004C26.92 3.46671 25.8133 3.77337 24.6667 3.92004C25.84 3.21337 26.7467 2.09337 27.1733 0.746707C26.0667 1.41337 24.84 1.88004 23.5467 2.14671C22.4933 1.00004 21.0133 0.333374 19.3333 0.333374C16.2 0.333374 13.64 2.89337 13.64 6.05337C13.64 6.50671 13.6933 6.94671 13.7867 7.36004C9.04001 7.12004 4.81334 4.84004 2.00001 1.38671C1.50668 2.22671 1.22668 3.21337 1.22668 4.25337C1.22668 6.24004 2.22668 8.00004 3.77334 9.00004C2.82668 9.00004 1.94668 8.73337 1.17334 8.33337V8.37337C1.17334 11.1467 3.14668 13.4667 5.76001 13.9867C4.92098 14.2163 4.04014 14.2483 3.18668 14.08C3.54882 15.2167 4.25806 16.2113 5.2147 16.9239C6.17134 17.6366 7.32727 18.0316 8.52001 18.0534C6.49818 19.654 3.99201 20.5191 1.41334 20.5067C0.960011 20.5067 0.506678 20.48 0.0533447 20.4267C2.58668 22.0534 5.60001 23 8.82668 23C19.3333 23 25.1067 14.28 25.1067 6.72004C25.1067 6.46671 25.1067 6.22671 25.0933 5.97337C26.2133 5.17337 27.1733 4.16004 27.9467 3.00004Z" fill="#FF9900"/>
             </svg>
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className='mx-2'>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.39996 0.666626H19.6C23.8666 0.666626 27.3333 4.13329 27.3333 8.39996V19.6C27.3333 21.651 26.5185 23.618 25.0683 25.0683C23.618 26.5185 21.651 27.3333 19.6 27.3333H8.39996C4.13329 27.3333 0.666626 23.8666 0.666626 19.6V8.39996C0.666626 6.34895 1.48139 4.38195 2.93167 2.93167C4.38195 1.48139 6.34895 0.666626 8.39996 0.666626ZM8.13329 3.33329C6.86025 3.33329 5.63935 3.83901 4.73918 4.73918C3.83901 5.63935 3.33329 6.86025 3.33329 8.13329V19.8666C3.33329 22.52 5.47996 24.6666 8.13329 24.6666H19.8666C21.1397 24.6666 22.3606 24.1609 23.2607 23.2607C24.1609 22.3606 24.6666 21.1397 24.6666 19.8666V8.13329C24.6666 5.47996 22.52 3.33329 19.8666 3.33329H8.13329ZM21 5.33329C21.442 5.33329 21.8659 5.50889 22.1785 5.82145C22.491 6.13401 22.6666 6.55793 22.6666 6.99996C22.6666 7.44199 22.491 7.86591 22.1785 8.17847C21.8659 8.49103 21.442 8.66663 21 8.66663C20.5579 8.66663 20.134 8.49103 19.8214 8.17847C19.5089 7.86591 19.3333 7.44199 19.3333 6.99996C19.3333 6.55793 19.5089 6.13401 19.8214 5.82145C20.134 5.50889 20.5579 5.33329 21 5.33329ZM14 7.33329C15.7681 7.33329 17.4638 8.03567 18.714 9.28591C19.9642 10.5362 20.6666 12.2318 20.6666 14C20.6666 15.7681 19.9642 17.4638 18.714 18.714C17.4638 19.9642 15.7681 20.6666 14 20.6666C12.2318 20.6666 10.5362 19.9642 9.28591 18.714C8.03567 17.4638 7.33329 15.7681 7.33329 14C7.33329 12.2318 8.03567 10.5362 9.28591 9.28591C10.5362 8.03567 12.2318 7.33329 14 7.33329ZM14 9.99996C12.9391 9.99996 11.9217 10.4214 11.1715 11.1715C10.4214 11.9217 9.99996 12.9391 9.99996 14C9.99996 15.0608 10.4214 16.0782 11.1715 16.8284C11.9217 17.5785 12.9391 18 14 18C15.0608 18 16.0782 17.5785 16.8284 16.8284C17.5785 16.0782 18 15.0608 18 14C18 12.9391 17.5785 11.9217 16.8284 11.1715C16.0782 10.4214 15.0608 9.99996 14 9.99996Z" fill="#FF9900"/>
             </svg>
           </div>

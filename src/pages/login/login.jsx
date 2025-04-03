@@ -16,7 +16,7 @@ function LoginForm() {
 
         {/* Form */}
 
-        <div className="flex items-center justify-start h-full">
+        <div className="flex items-center justify-start w-full h-full">
             <div className="">
             <h1 className="my-5 font-bold text-3xl">NAMSSN UI Elections is live!</h1>
             <p className="my-5">Enter your login details to begin voting.</p>

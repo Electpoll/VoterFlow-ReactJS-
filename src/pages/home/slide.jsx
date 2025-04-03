@@ -32,7 +32,7 @@ const carouselItems = [
 
 export default function Righthero() {
   return (
-    <section className="bg-black w-full min-h-[80vh] md:w-1/2 md:h-screen flex items-center justify-center py-8 md:py-10">
+    <section className="bg-black w-full h-[80vh] lg:h-full md:w-1/2 flex items-center justify-center py-8 md:py-10">
       <div className="w-full flex flex-col h-full relative">
         <Swiper
           modules={[Pagination, Autoplay]}

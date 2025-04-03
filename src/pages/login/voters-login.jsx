@@ -4,13 +4,13 @@ function votersLogin() {
   return (
     <>
     {/*Report*/}
-    <div className='flex justify-center items-center flex-col md:flex-row gap-5 w-full'>
-    <div className='md:w-1/2 px-10'>
+    <div className='flex justify-center items-center flex-col md:flex-row gap-5 w-full p-5'>
+    <div className='md:w-1/2 md:px-10'>
         <img src={img} alt="" />
     </div>
     <div className="md:w-1/2">
     <div className="max-w-2xl text-justify">
-        <h1 className='font-semibold text-5xl my-5'> Of Course You Have The Right To Vote...</h1>
+        <h1 className='font-semibold text-3xl sm:text-4xl md:text-5xl my-5'> Of Course You Have The Right To Vote...</h1>
         <p className='my-1'>But only members of NAMSSN UI are eligble to vote in this election. If you think this is a mistake, please <a className='text-amber-500 text-underline'>send us a message</a> to resolve this. 
         </p>
     </div>
