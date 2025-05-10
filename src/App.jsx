@@ -19,7 +19,7 @@ function App() {
       <Route exact path='/' element={<Homepage/>}/>
       <Route exact path='/login' element={<Login/>}/>
       <Route exact path='/learnmore' element={<LearnMore/>}/>
-      <Route exact path='/voting-portal/' element={<Dashboard/>}/>
+      <Route exact path='/voting-portal' element={<Dashboard/>}/>
       <Route exact path="/voting-portal/cast-vote" element={<CastVote />} />
       <Route exact path='/voting-portal/success' element={<Success/>}/>
       <Route exact path='/voting-portal/results' element={<Electionresults/>}/>

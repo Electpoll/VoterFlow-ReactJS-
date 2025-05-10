@@ -26,7 +26,7 @@ export default function Nav ({link, logo}) {
             <a href="/voting-portal" className={`font-bold text-sm sm:text-base md:text-lg mx-2 md:mx-5 relative py-1 ${link == 'dashboard' ? 'block' : 'hidden'}`}>
               <li className={activeLink === 'dashboard' ? 'active' : ''} onClick={() => setActiveLink('dashboard')}>Dashboard</li>
             </a>
-            <a href="/result" className='font-bold text-sm sm:text-base md:text-lg mx-2 md:mx-5 relative py-1'>
+            <a href="/voting-portal/results" className='font-bold text-sm sm:text-base md:text-lg mx-2 md:mx-5 relative py-1'>
               <li className={activeLink === 'result' ? 'active' : ''} onClick={() => setActiveLink('result')}>Results</li>
             </a>
             
