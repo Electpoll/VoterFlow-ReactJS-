@@ -3,6 +3,7 @@ import Sidebar from '../../../components/sidebar';
 import Nav from '../../../components/nav';
 import { StatBox, NumbersBox } from '../../../components/statbox';
 import { Section } from '../../../components/section';
+import { Link } from 'react-router-dom';
 
 
 export default function Dashboard() {
@@ -14,7 +15,7 @@ export default function Dashboard() {
     <div className="flex">
       <Sidebar for="voting" logout={true}/>
 
-      <div className="p-5 md:p-8 min-h-screen xl:h-full min-w-full bg-gray-100">
+      <div className="p-5 md:p-8 min-h-screen xl:h-full w-full bg-gray-100">
         <div className="flex justify-end">
           <Nav link="dashboard"/>
         </div>
@@ -52,11 +53,11 @@ export default function Dashboard() {
           data={positions}
         />
 
-        <a href="/voting-portal/cast-vote">
+        <Link to="/voting-portal/cast-vote">
         <button className="mt-6 w-full bg-black text-white py-3 rounded-sm hover:bg-gray-800 transition-colors">
           Proceed to Vote
         </button>
-        </a>
+        </Link>
       </div>
     </div>
   );

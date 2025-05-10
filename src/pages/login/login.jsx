@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { EyeIcon, EyeOff } from "lucide-react";
 import Nav from "../../components/nav";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
 
@@ -35,9 +36,9 @@ function LoginForm() {
                 )}
                 </div>
             </div>
-            <a href="/voting-portal">
+            <Link to="/voting-portal">
             <button className="w-full bg-black text-amber-500 rounded-lg border-2 border-transparent py-2 px-8 my-5 font-bold hover:bg-amber-500 hover:text-black transition-all">Login</button>
-            </a>
+            </Link>
             </div>
         </div>
 

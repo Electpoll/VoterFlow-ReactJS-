@@ -2,7 +2,7 @@ import BallotResults from '../../../components/ballot'
 import { ELECTION_STATS } from '../../../components/mock'
 import Nav from '../../../components/nav'
 import Sidebar from '../../../components/sidebar'
-import { NumbersBox, StatBox } from '../../../components/statbox'
+import { StatBox } from '../../../components/statbox'
 import { Users } from 'lucide-react'
 export default function Transparency() {
 

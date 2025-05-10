@@ -10,6 +10,7 @@ import img from '/img.jpg';
 import { SwiperContent } from '../../home/slide';
 import Report from '../../home/report';
 import Footer from '../../home/footer';
+import { Link } from 'react-router-dom';
 
 
 export default function Success() {
@@ -73,12 +74,12 @@ export default function Success() {
           We sent you a mail to get your review on the election process. Your opinion will help us improve the voting experience for future elections.
         </p>
          <div className="flex items-center gap-3 my-3">
-          <a href={'/'} className="my-3 w-full bg-black text-center text-white py-2 px-5 rounded-sm  border-2 border-transparent">
+          <Link to={'/'} className="my-3 w-full bg-black text-center text-white py-2 px-5 rounded-sm  border-2 border-transparent">
           Return home
-         </a>
-        <a href={'/'} className="my-3 w-full bg-transparent text-center text-black py-2 px-5 rounded-sm border-2 border-gray-500">
+         </Link>
+        <Link to={'/learnmore'} className="my-3 w-full bg-transparent text-center text-black py-2 px-5 rounded-sm border-2 border-gray-500">
           Learn more
-        </a>
+        </Link>
        </div>
       </div>
       

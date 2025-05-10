@@ -27,10 +27,11 @@ export default function Lefthero() {
               Vote Now
             </button>
           </Link>
-          
+          <Link to={'/learnmore'}>
           <button className="bg-transparent text-black rounded-lg border-2 border-gray-500 py-2 px-6 sm:px-8 font-bold hover:bg-black hover:text-white hover:border-transparent transition-all text-sm sm:text-base">
             Learn More
           </button>
+          </Link>
           </div>
         </div>
       </div>
