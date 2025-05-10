@@ -32,7 +32,7 @@ const carouselItems = [
 
 export default function Righthero() {
   return (
-    <section className="bg-black w-full h-[80vh] lg:h-full md:w-1/2 flex items-center justify-center py-8 md:py-10">
+    <section className="bg-black w-full h-fit md:w-1/2 flex items-center justify-center py-8 md:py-10">
       <div className="w-full flex flex-col h-full relative">
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -70,12 +70,12 @@ export default function Righthero() {
 }
 
 SwiperContent.propTypes = {
-  image: PropTypes.string.required,
+  image: PropTypes.func.required,
   title: PropTypes.string.required,
   content: PropTypes.string.required
 }
 
-function SwiperContent ({ image, title, content }) {
+export function SwiperContent ({ image, title, content }) {
   return (
   <div className="flex flex-col h-full">
     <div className="flex items-center justify-center px-4 sm:px-6 md:px-8">

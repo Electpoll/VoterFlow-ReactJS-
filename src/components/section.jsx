@@ -41,10 +41,10 @@ Section.propTypes = {
   
 export function DetailItem({ label, value }) {
     return (
-      <div className="bg-gray-100 space-x-3 flex items-center">
+      <div className="space-x-3 flex items-center">
         <img src="/list.svg" alt="" />
-        <div className="text-xs md:text-base font-semibold">{label}</div>
-        <div className="text-gray-900">{value}</div>
+        <div className="text-xs sm:text-sm md:text-base font-semibold">{label}</div>
+        <div className="text-gray-900 text-xs sm:text-sm md:text-base">{value}</div>
       </div>
     );
   }
@@ -57,7 +57,7 @@ export function PositionItem({ position }) {
     return (
       <div className="flex items-center space-x-3">
         <img src="/list.svg" alt="" />
-        <div className="text-gray-900">{position}</div>
+        <div className="text-gray-900 text-xs sm:text-sm md:text-base">{position}</div>
       </div>
     );
   }

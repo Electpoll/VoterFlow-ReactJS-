@@ -14,24 +14,24 @@ export default function Dashboard() {
     <div className="flex">
       <Sidebar for="voting" logout={true}/>
 
-      <div className="p-8 h-screen xl:h-full w-full bg-gray-100">
+      <div className="p-5 md:p-8 min-h-screen xl:h-full min-w-full bg-gray-100">
         <div className="flex justify-end">
           <Nav link="dashboard"/>
         </div>
 
         <h2 className="text-lg font-bold mt-10">Welcome {name},</h2>
         
-        <div className="bg-black rounded-md shadow-md mt-5 py-5 flex items-center justify-center gap-4 w-full">
-          <div className="border-e-2 border-white space-y-4 w-3/5 pe-5">
+        <div className="bg-black rounded-md shadow-md mt-5 py-5 sm:px-3 flex flex-col md:flex-row items-center md:justify-center gap-4 w-full">
+          <div className="md:border-e-2 border-white space-y-4 w-3/5 pe-5">
             <p className='text-white'>Election ends in...</p>
-            <div className="flex w-full gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {timeRemaining.map((i, index) => (
                 <NumbersBox key={index} value={i.number} text={i.time}/>
               ))}
             </div>
           </div>
           
-          <div className="border-e-2 border-white pe-5">
+          <div className="md:border-e-2 border-white pe-5">
             <StatBox label="Votes so far..." value={totalVotes} text='People Voted' />
           </div>
 

@@ -1,16 +1,24 @@
-
 import { useState } from 'react';
 import { CANDIDATES } from '../../../components/mock';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import Sidebar from '../../../components/sidebar';
 import Nav from '../../../components/nav';
-
+import ConfirmVoteModal from '../../../components/confirmvotemodal';
+import { useNavigate } from 'react-router-dom';
 
 export default function CastVote() {
   const [selectedCandidates, setSelectedCandidates] = useState({
     president: null,
-    vicePresident: null
+    vicePresident: null,
+    generalSecretary: null,
+    assistantGeneralSecretary: null,
+    sportsSecretary: null,
+    socialWelfareOfficer: null,
+    academicCoordinator: null,
+    publicRelationOfficer: null
   });
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCandidateSelect = (position, candidateId) => {
     setSelectedCandidates(prev => ({
@@ -19,58 +27,94 @@ export default function CastVote() {
     }));
   };
 
+  const navigate = useNavigate();
+  const handleSubmitVote = () => {
+    // Close modal
+    setIsModalOpen(false);
+    
+
+    // Or if using React Router:
+     navigate('/voting-portal/success');
+  };
+
+  const hasRequiredSelections = () => {
+    // Check if at least the required positions have been selected
+    return selectedCandidates.president && selectedCandidates.vicePresident;
+  };
+
   return (
     <>
-    <div className="flex">
-      <Sidebar for="voting" logout={true}/>
-    
-    <div className="p-8 w-full bg-gray-100">
-    <div className="flex justify-end">
-          <Nav link="dashboard"/>
-        </div>
-
-      <h2 className="text-2xl font-bold mb-6">Cast Your Vote</h2>
+      <div className="flex">
+        <Sidebar for="voting" logout={true}/>
       
-      <div className="space-y-6">
-        <VotingSection 
-          title="President" 
-          candidates={CANDIDATES.president}
-          position="president"
-          selectedCandidate={selectedCandidates.president}
-          onSelect={handleCandidateSelect}
-        />
-        
-        <VotingSection 
-          title="Vice President" 
-          candidates={CANDIDATES.vicePresident}
-          position="vicePresident"
-          selectedCandidate={selectedCandidates.vicePresident}
-          onSelect={handleCandidateSelect}
-        />
-        
-        <button 
-          className="w-full bg-black text-white py-3 rounded-xl 
-          hover:bg-gray-800 transition-colors 
-          disabled:opacity-50 disabled:cursor-not-allowed"
-          disabled={!selectedCandidates.president || !selectedCandidates.vicePresident}
-        >
-          Submit Your Vote
-        </button>
+        <div className="p-8 w-full bg-gray-100">
+          <div className="flex justify-end">
+            <Nav link="dashboard"/>
+          </div>
+
+          <h2 className="text-2xl font-bold my-5">Cast Your Vote</h2>
+          
+          <div className="space-y-6">
+            <VotingSection 
+              title="President" 
+              candidates={CANDIDATES.president}
+              position="president"
+              selectedCandidate={selectedCandidates.president}
+              onSelect={handleCandidateSelect}
+            />
+            
+            <VotingSection 
+              title="Vice President" 
+              candidates={CANDIDATES.vicePresident}
+              position="vicePresident"
+              selectedCandidate={selectedCandidates.vicePresident}
+              onSelect={handleCandidateSelect}
+            />
+
+            {/* Add other positions if they exist in your CANDIDATES data */}
+            {CANDIDATES.generalSecretary && (
+              <VotingSection 
+                title="General Secretary" 
+                candidates={CANDIDATES.generalSecretary}
+                position="generalSecretary"
+                selectedCandidate={selectedCandidates.generalSecretary}
+                onSelect={handleCandidateSelect}
+              />
+            )}
+
+            {/* Button to open confirmation modal */}
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="w-full bg-black text-white py-3 rounded-xl 
+              hover:bg-gray-800 transition-colors 
+              disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={!hasRequiredSelections()}
+            >
+              Review and Submit Your Vote
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
+
+      {/* Confirmation Modal */}
+      <ConfirmVoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)} 
+        onSubmit={handleSubmitVote}
+        selectedCandidates={selectedCandidates}
+        candidatesData={CANDIDATES}
+      />
     </>
   );
 }
 
-
 VotingSection.propTypes = {
-    title: PropTypes.string.isRequired,
-    candidates: PropTypes.node.isRequired,
-    position: PropTypes.string.isRequired,
-    selectedCandidate: PropTypes.node.isRequired,
-    onSelect: PropTypes.func.isRequired
-  };
+  title: PropTypes.string.isRequired,
+  candidates: PropTypes.array.isRequired,
+  position: PropTypes.string.isRequired,
+  selectedCandidate: PropTypes.string,
+  onSelect: PropTypes.func.isRequired
+};
 
 function VotingSection({ title, candidates, position, selectedCandidate, onSelect }) {
   return (
@@ -91,10 +135,11 @@ function VotingSection({ title, candidates, position, selectedCandidate, onSelec
 }
 
 CandidateCard.propTypes = {
-    candidate: PropTypes.node.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    onSelect: PropTypes.func.isRequired
-}
+  candidate: PropTypes.object.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  onSelect: PropTypes.func.isRequired
+};
+
 function CandidateCard({ candidate, isSelected, onSelect }) {
   return (
     <div 
@@ -116,9 +161,6 @@ function CandidateCard({ candidate, isSelected, onSelect }) {
         />
       </div>
       <h4 className="font-semibold">{candidate.name}</h4>
-      {candidate.votes && (
-        <p className="text-sm text-gray-500">{candidate.votes} Votes</p>
-      )}
       {isSelected && (
         <div className="mt-2 text-[#FF9900]">
           ✓ Selected

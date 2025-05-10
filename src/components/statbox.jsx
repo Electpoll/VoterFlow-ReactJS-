@@ -24,8 +24,8 @@ export function StatBox({ label, value, text }) {
 export function NumbersBox({value, text}) {
     return (
       <div className="bg-[#FF7A00] space-y-2 p-4 rounded-sm text-center flex-1">
-        <div className="font-bold text-xl md:text-2xl text-black">{value}</div>
-        <div className="text-sm md:text-base text-white">{text}</div>
+        <div className="font-bold text-lg sm:text-xl md:text-2xl text-black">{value}</div>
+        <div className="text-xs sm:text-sm lg:text-base text-white">{text}</div>
       </div>
     );
   }

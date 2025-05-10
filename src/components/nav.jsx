@@ -14,9 +14,9 @@ export default function Nav ({link, logo}) {
   return (
     <>
     {/* Nav  */}
-    <div className="flex items-center justify-between pb-4 border-b-2 border-gray-200 md:border-none">
+    <div className="flex items-center justify-between min-h-fit py-4 border-b-2 border-gray-200 md:border-none">
     <div className={`${logo ? 'block' : 'hidden'}`}>
-         <img src="/logo.jpg" alt="" className='h-8 md:h-auto' />
+         <img src="/logo.jpg" alt="" className='h-6 md:h-auto' />
     </div>
     <div className="nav">
         <ul className='flex justify-around cursor-pointer'>
