@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import people from '/people.png';
+import phone from '/phone.jpg';
 import img from '/img.jpg';
 import { SwiperContent } from '../../home/slide';
 import Report from '../../home/report';
@@ -25,7 +26,7 @@ export default function Success() {
     },
     { 
       id: 2, 
-      image: laptop, 
+      image: phone, 
       title: 'Transparency You Can See', 
       content: 'Experience an unprecedented level of transparency in elections. With Electpoll, you can track your vote and verify its inclusion in the final tally. Our blockchain-backed system guarantees an immutable record of every vote, enhancing the credibility and fairness of the electoral system.'
     },
