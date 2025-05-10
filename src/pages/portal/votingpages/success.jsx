@@ -4,8 +4,7 @@ import { NumbersBox, StatBox } from '../../../components/statbox';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import laptop from '/laptop.jpg';
-import phone from '/phone.jpg';
+import people from '/people.png';
 import img from '/img.jpg';
 import { SwiperContent } from '../../home/slide';
 import Report from '../../home/report';
@@ -32,7 +31,7 @@ export default function Success() {
     },
     { 
       id: 3, 
-      image: phone, 
+      image: people, 
       title: 'Robust Security for Every Vote', 
       content: 'Rest easy knowing that your vote is protected by state-of-the-art security measures. Our advanced encryption and authentication protocols ensure the integrity of the electoral process, safeguarding against fraud and manipulation. Your trust in our platform is our top priority.' 
     }
